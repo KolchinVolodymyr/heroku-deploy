@@ -73,7 +73,7 @@ if (process.env.NODE_ENV === 'production') {
       );
     }
     //
-    reply.continue();
+    return reply.continue;
   });
 }
 
