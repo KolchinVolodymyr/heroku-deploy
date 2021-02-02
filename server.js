@@ -72,7 +72,7 @@ if (process.env.NODE_ENV === 'production') {
         `https://${request.headers.host}${request.path}${request.url.search}`
       );
     }
-    ///
+    //
     reply.continue();
   });
 }
