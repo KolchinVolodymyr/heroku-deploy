@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "hapi": "^16.5.2",
-    "inert": "^4.2.1",
+    "@hapi/cookie": "^10.1.0",
+    "@hapi/hapi": "^20.0.3",
+    "@hapi/inert": "^6.0.3",
+    "@hapi/joi": "^15.1.1",
     "path": "^0.12.7",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "1.0.13"
   },
   "scripts": {
