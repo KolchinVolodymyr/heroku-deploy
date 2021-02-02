@@ -65,7 +65,7 @@ async function start() {
 
 // Redirect all http requests to https if in production
 /* eslint-disable consistent-return */
-if (process.env.NODE_ENV === 'production') {
+//if (process.env.NODE_ENV === 'production') {
   server.ext('onRequest', (request, reply) => {
     if (request.headers['x-forwarded-proto'] !== 'https') {
       return reply('Forwarding to secure route').redirect(
@@ -75,7 +75,7 @@ if (process.env.NODE_ENV === 'production') {
     //
     return reply.continue;
   });
-}
+//}
 
 
 // Setting index.html as the default
