@@ -11,7 +11,9 @@ exports.plugin = {
                 name: 'sid-example',
                 ttl: 168 * 60 * 60 * 1000,
                 // Don't forget to change it to your own secret password!
-                password: config.get('passwordCookies'),
+
+                password: process.env.PASSWORDCOOKIES,
+                //password: config.get('passwordCookies'),
                 // For working via HTTP in localhost
                 isSecure: false
             },

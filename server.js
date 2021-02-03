@@ -72,9 +72,9 @@ server.ext('onPreResponse', (request, reply) => {
   // else an error has occurred
   const error = response;
 
-  // if the error is 'Object not found', call index.html
+  // if the error is 'Object not found'
   if (error.output.statusCode === 404) {
-    return reply.response({key: "home value"});
+    return reply.response({message: "Not found"});
   }
 })
 
