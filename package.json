@@ -23,7 +23,7 @@
   },
   "scripts": {
     "postinstall": "npm run build",
-    "serve": "node server.js",
+    "serve": "cross-env NODE_ENV=production node server.js",
     "startreact": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
