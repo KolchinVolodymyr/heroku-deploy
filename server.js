@@ -18,7 +18,6 @@ const сonfigure = {
 const server = new Hapi.server(сonfigure);
 
 
-// Register the inert plugin
 async function start() {
   // register plugins to server instance
   await server.register([
@@ -28,7 +27,6 @@ async function start() {
     {
       plugin: require('@hapi/cookie')
     },
-
     {
       plugin: require('./api/plugins/settingCookie')
     },
@@ -62,20 +60,6 @@ async function start() {
     console.error('Cannot run server', e);
   }
 }
-
-// Redirect all http requests to https if in production
-/* eslint-disable consistent-return */
-if (process.env.NODE_ENV === 'production') {
-  server.ext('onRequest', (request, reply) => {
-    if (request.headers['x-forwarded-proto'] !== 'https') {
-      return reply('Forwarding to secure route').redirect(
-        `https://${request.headers.host}${request.path}${request.url.search}`
-      );
-    }
-    return reply.continue;
-  });
-}
-
 
 // Setting index.html as the default
 server.ext('onPreResponse', (request, reply) => {
