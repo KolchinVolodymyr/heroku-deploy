@@ -14,8 +14,17 @@ export const HomePage = () => {
             <div className="progress">
                 <div className="indeterminate"/>
             </div>
+            <h5>
+                Reactive e-commerce store with React + NodeJS + MongoDB!
+            </h5>
             <p>
-                The site is temporarily unavailable. Sorry, routine maintenance is underway.
+                A small demo of a real working store based on 100% JavaScript: Frontend, and Backend.
+
+                All sorts of effects, animations, changes to page content - everything happens right inside the page, without page reloads.
+
+                Unlike monoliths like WordPress, OpenCart, there are no unnecessary requests and drawings.
+
+                Through the API, we receive "raw" data in JSON format and render them in React.
             </p>
             <img src={logo} className="App-logo" alt="logo"/>
         </div>

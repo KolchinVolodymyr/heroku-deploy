@@ -16,3 +16,12 @@ A demo of the app can be found on this [Application](https://limitless-fjord-370
 
 _Other dependencies can be found in the package.json_
 
+
+
+# Acknowledgements
+The inspiration for the server.js file is got from [Heroku's WYWH repo](https://github.com/heroku/wywh).
+
+The react app was obtained from the [react-style-boilerplate repo](https://github.com/Tinitto/react-style-boilerplate)
+
+This deployment option is based on the [gist](https://gist.github.com/hone/24b06869b4c1eca701f9) written by Terrence Lee.
+
