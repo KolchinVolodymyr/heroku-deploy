@@ -7,17 +7,17 @@ import logo from "../logo.svg";
 export const HomePage = () => {
 
     return (
-        <div id="login" className="col s6">
-            <h2>Home home</h2>
-            <div className="App">
-                <div className="sss App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h2>336ssssssssss Welcome to React</h2>
-                </div>
-                <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to reload.
-                </p>
+        <div>
+            <h1>
+                Home Page
+            </h1>
+            <div className="progress">
+                <div className="indeterminate"/>
             </div>
+            <p>
+                The site is temporarily unavailable. Sorry, routine maintenance is underway.
+            </p>
+            <img src={logo} className="App-logo" alt="logo"/>
         </div>
     );
 }

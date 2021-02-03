@@ -13,7 +13,8 @@ export const OrderList = ({item}) => {
                     <p>
                         {item.date}
                     </p>
-                    <p><em>{item.user.userId.name}</em>{item.user.userId.email}</p>
+                    <p><em>{item.user.userId.name}</em></p>
+                    <p>{item.user.userId.email}</p>
                     <ol>
                         {item.courses.map( index =>{
                             return (

@@ -1,8 +1,8 @@
 /* eslint-disable react/prefer-stateless-function */
 
-import React, { Component }from 'react';
-
-import {BrowserRouter as Router} from 'react-router-dom'
+import React from 'react';
+import 'materialize-css';
+import {BrowserRouter as Router} from 'react-router-dom';
 import './App.css';
 import {AuthContext} from './context/AuthContext'
 import {Navbar} from "./components/Navbar";
