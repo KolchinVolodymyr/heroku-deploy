@@ -6,34 +6,47 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import {NavLink} from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
-import {Login} from "./components/Login";
-import {Home} from "./components/Home";
+
+import {AuthPage} from "./pages/AuthPage";
+import {CoursesPage} from "./pages/CoursesPage";
+import {HomePage} from "./pages/HomePage";
 
 
 function App() {
-
         return (
             <div className="App">
+
                  <Router>
                      <nav>
                          <div className="nav-wrapper">
                              <ul id="nav-mobile" className="right hide-on-med-and-down">
                                  <li><NavLink to="/">Home</NavLink></li>
-                                 <li><NavLink to="/login">login</NavLink></li>
+                                 <li><NavLink to="/courses">Courses</NavLink></li>
+                                 <li><NavLink to="/login">Log in</NavLink></li>
                              </ul>
                          </div>
-                    </nav>
+                     </nav>
                      <div>
                          <Switch>
-                             <Route exact path="/" component={Home} />
-                             <Route exact path="/login" component={Login} />
-
+                             <Route path="/" exact>
+                                 <HomePage />
+                             </Route>
+                             <Route path="/courses" exact>
+                                 <CoursesPage />
+                             </Route>
+                             {/*<Route path="/courses/:id" exact>*/}
+                             {/*    <CourseDetailPage />*/}
+                             {/*</Route>*/}
+                             <Route path="/login" exact>
+                                 <AuthPage />
+                             </Route>
+                             <Redirect to="/login" />
                          </Switch>
                      </div>
                  </Router>
                 <div className="sss App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
-                    <h2>31ssssssssss Welcome to React</h2>
+                    <h2>336ssssssssss Welcome to React</h2>
                 </div>
                 <p className="App-intro">
                     To get started, edit <code>src/App.js</code> and save to reload.

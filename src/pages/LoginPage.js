@@ -1,33 +1,6 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {AuthContext} from "../context/AuthContext";
-import {useMessage} from "../hooks/message.hook";
-import {useHttp} from "../hooks/http.hook";
+import React from 'react';
 
-
-export const Login = () => {
-    const auth = useContext(AuthContext);
-    const message = useMessage();
-    const {loading, error, request, clearError} = useHttp();
-    const [form, setForm] = useState({
-        email: '', password:''
-    });
-
-    useEffect(() => {
-        message(error);
-        clearError();
-    }, [error, message, clearError])
-
-    const changeHandler = event => {
-        setForm({...form, [event.target.name]: event.target.value});
-    }
-    const loginHandler = async () => {
-        try {
-            const data = await request('/login', 'POST', {...form});
-            auth.login(data.token, data.userId);
-        } catch (e) {
-            console.log(e);
-        }
-    }
+export const LoginPage = () => {
 
     return (
         <div id="login" className="col s6">
@@ -39,7 +12,7 @@ export const Login = () => {
                         type="email"
                         name="email"
                         className="validate"
-                       // onChange={changeHandler}
+                        //onChange={changeHandler}
                         required
                     />
                     <label htmlFor="email">Email</label>
@@ -59,8 +32,8 @@ export const Login = () => {
                 </div>
                 <button
                     className="btn btn-primary"
-                    disabled={loading}
-                    //onClick={loginHandler}
+                    // disabled={loading}
+                    // onClick={loginHandler}
                 >
                     Log in
                 </button>
