@@ -1,5 +1,6 @@
 const Path = require('path');
 const Hapi = require('@hapi/hapi');
+const Course = require('../heroku-deploy/api/add-course/schema');
 
 // create the Hapi server
 const сonfigure = {
@@ -40,6 +41,41 @@ async function start() {
     //   plugin: require('./plugins/loadAllRoutes')
     // }
   ]);
+  server.route([
+    {
+      method: 'GET',
+      path: `/courses`,
+      options: {
+        auth: {
+          mode: 'try',
+          strategy: 'session60'
+        }
+      },
+      handler: async function (request, h) {
+        const courses = await Course.find();
+        return h.response(courses).code(200).takeover();
+      }
+    },
+    {
+      method: 'GET',
+      path: `/courses/{id}`,
+      options: {
+        auth: {
+          mode: 'try',
+          strategy: 'session60'
+        }
+      },
+      handler: async function (request, h) {
+        try {
+          const course = await Course.findById(request.params.id);
+          return h.response(course).code(200).takeover();
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    }
+  ]);
+
   // Create the route for the build artefacts
   server.route({
     method: 'GET',
@@ -52,6 +88,7 @@ async function start() {
         index: true,
       },
     },
+
       })
 
 

@@ -15,6 +15,7 @@ module.exports = [
         },
         handler: async function (request, h) {
             const courses = await Course.find();
+            console.log('get courses', courses);
             return h.response(courses).code(200).takeover();
         }
     },

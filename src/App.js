@@ -6,10 +6,10 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import {NavLink} from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
-
 import {AuthPage} from "./pages/AuthPage";
 import {CoursesPage} from "./pages/CoursesPage";
 import {HomePage} from "./pages/HomePage";
+import {CourseDetailPage} from "./pages/CourseDetailPage";
 
 
 function App() {
@@ -34,9 +34,9 @@ function App() {
                              <Route path="/courses" exact>
                                  <CoursesPage />
                              </Route>
-                             {/*<Route path="/courses/:id" exact>*/}
-                             {/*    <CourseDetailPage />*/}
-                             {/*</Route>*/}
+                             <Route path="/courses/:id" exact>
+                                 <CourseDetailPage />
+                             </Route>
                              <Route path="/login" exact>
                                  <AuthPage />
                              </Route>
