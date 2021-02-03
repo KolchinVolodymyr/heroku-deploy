@@ -7,8 +7,8 @@ exports.plugin = {
     register: async function (server, options) {
         //
         //connect BD
-        //const url = config.get('mongoUrl');
-        const url = process.env.MONGOURL;
+        const url = config.get('mongoUrl');
+        //const url = process.env.MONGOURL;
         await mongoose.connect(url,{
             useNewUrlParser: true,
             useUnifiedTopology: true,

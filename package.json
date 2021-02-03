@@ -9,7 +9,6 @@
     "@hapi/joi": "^15.1.1",
     "bcryptjs": "^2.4.3",
     "config": "^3.3.3",
-    "cross-env": "^7.0.3",
     "find": "^0.3.0",
     "joi": "^17.3.0",
     "jsonwebtoken": "^8.5.1",
@@ -23,7 +22,7 @@
   },
   "scripts": {
     "postinstall": "npm run build",
-    "serve": "set NODE_ENV=production&& node server.js",
+    "serve": "node server.js",
     "startreact": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
