@@ -1,6 +1,6 @@
 const Path = require('path');
 const Hapi = require('@hapi/hapi');
-const Course = require('../heroku-deploy/api/add-course/schema');
+const Course = require('../../api/add-course/schema');
 
 // create the Hapi server
 const сonfigure = {
