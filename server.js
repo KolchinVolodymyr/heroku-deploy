@@ -31,10 +31,10 @@ async function start() {
     },
 
     {
-      plugin: require('./plugins/settingCookie')
+      plugin: require('./api/plugins/settingCookie')
     },
     {
-      plugin: require('./plugins/connectMongoose')
+      plugin: require('./api/plugins/connectMongoose')
     },
     // {
     //   plugin: require('./plugins/loadAllRoutes')
