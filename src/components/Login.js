@@ -39,7 +39,7 @@ export const Login = () => {
                         type="email"
                         name="email"
                         className="validate"
-                       // onChange={changeHandler}
+                        onChange={changeHandler}
                         required
                     />
                     <label htmlFor="email">Email</label>
@@ -51,7 +51,7 @@ export const Login = () => {
                         type="password"
                         className="validate"
                         name="password"
-                        //onChange={changeHandler}
+                        onChange={changeHandler}
                         required
                     />
                     <label htmlFor="password">Password</label>
@@ -60,7 +60,7 @@ export const Login = () => {
                 <button
                     className="btn btn-primary"
                     disabled={loading}
-                    //onClick={loginHandler}
+                    onClick={loginHandler}
                 >
                     Log in
                 </button>

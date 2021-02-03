@@ -44,7 +44,7 @@ export const Navbar = () => {
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/courses">Courses</NavLink></li>
-                        <li><a href="/login">Log in</a></li>
+                        <li><NavLink to="/login">login</NavLink></li>
                     </ul>
                 </div>
             </nav>

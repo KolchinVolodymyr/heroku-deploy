@@ -7,9 +7,8 @@ export const AuthPage = () => {
     return (
         <div className="auth">
             <div className="row">
-                this AuthPage
-                {/*<Login/>*/}
-                {/*<Register/>*/}
+                <Login/>
+                <Register/>
             </div>
         </div>
     );

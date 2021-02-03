@@ -15,6 +15,9 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "1.0.13",
     "materialize-css": "^1.0.0-rc.2",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.5.1",
+    "joi": "^17.3.0",
     "find": "^0.3.0"
   },
   "scripts": {
