@@ -39,13 +39,12 @@ module.exports = [
         },
         handler: async function (request, h) {
             if (!request.payload.userId) {
-                return h.response({message: 'Login required'}).code(401);
+                return await h.response({message: 'Login required'}).code(401).takeover();
             }
             request.user = await User.findById(request.payload.userId);
             const course = await Course.findById(request.payload.id);
-
             await request.user.addToCart(course);
-            return h.response({message: 'Added to cart!'}).code(200);
+            return h.response({message: 'Added to cart!!'}).code(200);
 
         }
     },

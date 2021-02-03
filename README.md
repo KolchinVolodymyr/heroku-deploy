@@ -1,8 +1,13 @@
 # hapi-react-spa 
-A Single Page Reactjs Application boilerplate served by Hapijs and the inert plugin. Deploy Reactjs apps easily to [Heroku](https://www.heroku.com/) or any such hosting.
+A Single Page Reactjs Application boilerplate served by Hapi.js. Deploy Reactjs apps easily to [Heroku](https://www.heroku.com/) or any such hosting.
 
 # Demo
-1. [Application](https://limitless-fjord-37037.herokuapp.com) v1.0.0
+####Access to personal account:
+```bash
+Email: admin@gmail.com
+Password: 12345
+```
+A demo of the app can be found on this [Application](https://limitless-fjord-37037.herokuapp.com) v1.0.0
 
 # Major Dependencies
 1. [Hapi](https://hapijs.com/) 20.0.3

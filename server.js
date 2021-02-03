@@ -61,22 +61,5 @@ async function start() {
   }
 }
 
-// Setting index.html as the default
-server.ext('onPreResponse', (request, reply) => {
-  const response = request.response;
-
-  if (!response.isBoom) {
-    return reply.continue ;
-  }
-
-  // else an error has occurred
-  const error = response;
-
-  // if the error is 'Object not found'
-  if (error.output.statusCode === 404) {
-    return reply.response({message: "Not found"});
-  }
-})
-
 // Start server
 start()
