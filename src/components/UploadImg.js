@@ -49,7 +49,7 @@ export const UploadImg = ({profile}) => {
                 type="submit"
                 className="btn green avatar__btn"
                 onClick={fetchAvatarProfile}
-            > Сохранить аватар</button>
+            > Save avator</button>
 
             {image ? (
                 <img className="avatar" src={image} alt='avatar'/>
